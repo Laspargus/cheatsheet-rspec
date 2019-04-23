@@ -139,7 +139,7 @@ create(:turtle, name: 'Léonardo')
 create_list(:turtle, 12)
 ```
 
-##ShouldaMatchers
+## ShouldaMatchers
 Permet de tester les validation des modèles (entre autre).
 
 
