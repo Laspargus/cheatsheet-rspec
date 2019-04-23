@@ -235,14 +235,13 @@ end
   ## Shoulda Matcher : is_expected.to ==> should 
 
   describe 'Product Validates' do
-    let(:product) { build(:product) }
-
+    
     it { is_expected.to validate_presence_of(:price) }
     it { is_expected.to validate_presence_of(:title) }
     it { is_expected.to validate_presence_of(:description) }
     it { should validate_presence_of(:image ) }
     it { should validate_presence_of(:category_id ) }
-  end 
+  end
 ```
 
 
