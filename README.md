@@ -1,8 +1,8 @@
 # GEMS UTILES
 
 ## EN DEV + TEST
-rspec-rails: rspec pour rails \o/
-rubocop: rubocop ça check la syntaxe de ton code :)
+- rspec-rails: rspec pour rails \o/
+- rubocop: rubocop ça check la syntaxe de ton code :)
 
 ## EN TEST
 factory_bot_rails: Permet de créer facilement des instance de modèle en database.
