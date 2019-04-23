@@ -171,7 +171,9 @@ La liste des helpers de tests se trouve ici: https://github.com/thoughtbot/shoul
 
 # Les différents types de test
 
-## Test de DB
+## Test de Modèle
+
+### Tester la base de donnée
 
 ```ruby
 require 'rails_helper'
@@ -193,4 +195,64 @@ RSpec.describe Product, type: :model do
     end
 end
 ```
+
+
+### Tester les attributs d'une instance 
+
+```ruby
+  describe 'Product attributes' do
+    let(:product)  { build(:product) }
+
+    context 'Price' do
+      it { expect(product.price).to be > 0 }
+    end
+
+    context 'Image https' do 
+      it { expect(product.image).to match(/https:/)}
+    end
+  end
+```
+
+
+### Tester les association d'un modèle
+
+```ruby
+  describe 'Product Association' do
+    it { should belong_to(:category) }
+    it { should have_many(:selections) }
+    it { should have_many(:carts) }
+    it { should have_many(:order_products) }
+    it { should have_many(:orders) }
+  end
+```
+
+
+### Tester les association d'un modèle
+
+```ruby
+  describe 'Product Validates' do
+    let(:product)  { build(:product) }
+
+    context 'Validate presence of price' do
+     it { should validate_presence_of(:price) }
+    end
+
+     context 'Validate presence of title' do
+     it { should validate_presence_of(:title) }
+    end
+
+     context 'Validate presence of description' do
+     it { should validate_presence_of(:description) }
+    end
+
+     context 'Validate presence of image' do
+     it { should validate_presence_of(:image ) }
+    end
+
+     context 'Validate presence of category_id' do
+     it { should validate_presence_of(:category_id ) }
+    end
+  end
+```
+
 
