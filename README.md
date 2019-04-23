@@ -139,3 +139,30 @@ create(:turtle, name: 'Léonardo')
 create_list(:turtle, 12)
 ```
 
+##ShouldaMatchers
+Permet de tester les validation des modèles (entre autre).
+
+
+On l’installe en ajoutant à la fin du spec/rails_helper
+
+```ruby
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+```
+
+Par exemple si le modèle défini une validation de présence:
+
+
+validates :name, presence: true
+on la test de cette façon:
+
+```ruby
+it { should validate_presence_of(:name) }
+```
+
+La liste des helpers de tests se trouve ici: https://github.com/thoughtbot/shoulda-matchers
