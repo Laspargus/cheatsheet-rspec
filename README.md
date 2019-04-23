@@ -1,10 +1,10 @@
-#GEMS UTILES
+# GEMS UTILES
 
-##EN DEV + TEST
+## EN DEV + TEST
 rspec-rails: rspec pour rails \o/
 rubocop: rubocop ça check la syntaxe de ton code :)
 
-##EN TEST
+## EN TEST
 factory_bot_rails: Permet de créer facilement des instance de modèle en database.
 faker: Permet de générer de fausses données de test.
 nyan-cat-formatter: C’est mignon les nyan cat pendant les tests :)
@@ -12,7 +12,7 @@ shoulda-matchers: Permet de vérifier les validations facilement dans les tests.
 
 
 
-#DESCRIBE/CONTEXT
+# DESCRIBE/CONTEXT
 Les deux font la même chose et permettent de définir un “contexte” de test. Et donc de séparer nos tests pour les rendre plus lisibles.
 
 On utilisera describe plus pour préciser des noms de classe/méthode:
@@ -34,7 +34,7 @@ describe MaClass do
 end
 ```
 
-#IT
+# IT
 it permet de faire un test. Il est conseillé de ne pas mettre “should” dedans. Par exemple:
 
 ```ruby
@@ -49,14 +49,14 @@ rspec --format doc
 ```
 
 
-#EXPECT
+# EXPECT
 Ça permet de tester quelque chose. Une liste de matchers peut être trouvé ici: https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/built-in-matchers
 
 ```ruby
 expect([1,2,3]).to include(2)
 ```
 
-#LET/LET!
+# LET/LET!
 let et son ami let! vous permettent de définir une variable qui sera utilisable dans vos tests. Les let sont scope par describe/context.
 
 Un exemple d’utilisation:
@@ -79,7 +79,7 @@ end
 
 La différence entre let et let! c’est que let est lazy et ne sera instancié que la première fois que la variable est appelée tandis que let! instancie la variable avant le test. C’est particulièrement pratique quand les let! instancie des objets en database.
 
-#BEFORE
+# BEFORE
 
 before permet de définir un block qui sera exécuté avant chaque test. Par exemple:
 
@@ -94,7 +94,7 @@ end
 ```
 
 
-#SUBJECT
+# SUBJECT
 C’est un peu comme un let ça permet de définir le “sujet” du test. On l’invoque plus tard dans son test en faisant subject
 
 ```ruby
@@ -108,7 +108,7 @@ it "has an array of turtles" do
 end
 ```
 
-#FactoryBot
+# FactoryBot
 FactoryBot est une gem pour nous aider à définir des factories qui permettent de générer des objets en DB dans nos tests.
 
 On l’installe en ajoutant dans spec/rails_helper dans le block de configuration:
