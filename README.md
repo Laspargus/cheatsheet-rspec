@@ -5,10 +5,10 @@
 - rubocop: rubocop ça check la syntaxe de ton code :)
 
 ## EN TEST
-factory_bot_rails: Permet de créer facilement des instance de modèle en database.
-faker: Permet de générer de fausses données de test.
-nyan-cat-formatter: C’est mignon les nyan cat pendant les tests :)
-shoulda-matchers: Permet de vérifier les validations facilement dans les tests.
+- factory_bot_rails: Permet de créer facilement des instance de modèle en database.
+- faker: Permet de générer de fausses données de test.
+- nyan-cat-formatter: C’est mignon les nyan cat pendant les tests :)
+- shoulda-matchers: Permet de vérifier les validations facilement dans les tests.
 
 
 
