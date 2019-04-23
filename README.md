@@ -217,9 +217,11 @@ end
 ### Tester les association d'un modèle
 
 ```ruby
+   ## Shoulda Matcher : is_expected.to ==> should 
+
   describe 'Product Association' do
-    it { should belong_to(:category) }
-    it { should have_many(:selections) }
+    it { is_expected.to belong_to(:category) }
+    it { is_expected.to have_many(:selections) }
     it { should have_many(:carts) }
     it { should have_many(:order_products) }
     it { should have_many(:orders) }
@@ -227,32 +229,20 @@ end
 ```
 
 
-### Tester les association d'un modèle
+### Tester les Validates
 
 ```ruby
+  ## Shoulda Matcher : is_expected.to ==> should 
+
   describe 'Product Validates' do
-    let(:product)  { build(:product) }
+    let(:product) { build(:product) }
 
-    context 'Validate presence of price' do
-     it { should validate_presence_of(:price) }
-    end
-
-     context 'Validate presence of title' do
-     it { should validate_presence_of(:title) }
-    end
-
-     context 'Validate presence of description' do
-     it { should validate_presence_of(:description) }
-    end
-
-     context 'Validate presence of image' do
-     it { should validate_presence_of(:image ) }
-    end
-
-     context 'Validate presence of category_id' do
-     it { should validate_presence_of(:category_id ) }
-    end
-  end
+    it { is_expected.to validate_presence_of(:price) }
+    it { is_expected.to validate_presence_of(:title) }
+    it { is_expected.to validate_presence_of(:description) }
+    it { should validate_presence_of(:image ) }
+    it { should validate_presence_of(:category_id ) }
+  end 
 ```
 
 
