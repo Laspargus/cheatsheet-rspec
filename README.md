@@ -56,6 +56,10 @@ rspec --format doc
 expect([1,2,3]).to include(2)
 ```
 
+
+## Les différences entre Before, Subject, Let et Let!
+(avec exemples et utilisation de Factory)
+
 ## LET/LET!
 let et son ami let! vous permettent de définir une variable qui sera utilisable dans vos tests. Les let sont scope par describe/context.
 
@@ -77,7 +81,7 @@ context "this will not work" do
 end
 ```
 
-La différence entre let et let! c’est que let est lazy et ne sera instancié que la première fois que la variable est appelée tandis que let! instancie la variable avant le test. C’est particulièrement pratique quand les let! instancie des objets en database.
+La différence entre let et let! c’est que let est lazy et ne sera instancié que la première fois que la variable est appelée tandis que let! instancie la variable avant le test.C’est particulièrement pratique quand les let! instancie des objets en database.
 
 ## BEFORE
 
@@ -93,6 +97,7 @@ it "has one turtle in db" do
 end
 ```
 
+Il se déclare généralement après le describe et va permettre d'appeler une varibale dans tous les tests qui suivent. 
 
 ## SUBJECT
 C’est un peu comme un let ça permet de définir le “sujet” du test. On l’invoque plus tard dans son test en faisant subject
@@ -267,6 +272,9 @@ end
     it { should validate_presence_of(:category_id ) }
   end
 ```
+
+
+
 
 
 ### Liens Utiles
