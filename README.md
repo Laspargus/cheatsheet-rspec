@@ -274,6 +274,47 @@ end
 ```
 
 
+On peut également tester les validates en créant une instance et en passant successivement chaque attribut obligatoire à nil. 
+
+Exemple : 
+
+```ruby 
+ ########## ATTRIBUTES ############
+
+  describe 'Product attributes' do
+    let(:product) { build(:product) }
+
+    it "is valid without any errors" do
+      expect(product.errors).to be_empty 
+    end
+
+    it "is valid with valid attributes" do
+      expect(product).to be_valid
+    end
+
+    context "product should not be valid" do
+      it "is not valid with missing all attributes" do
+       expect(Product.new).to_not be_valid
+      end
+
+      it "is not valid with missing price attributes" do
+        product.price = nil
+        expect(product).to_not be_valid
+      end
+
+      it "is not valid with missing descritpion attributes" do
+        product.description = nil
+        expect(product).to_not be_valid
+      end
+
+      it "is not valid with missing titile  attributes" do
+        product.title = nil
+        expect(product).to_not be_valid
+      end
+    end
+
+
+```
 
 
 
