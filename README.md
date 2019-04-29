@@ -108,6 +108,30 @@ it "has an array of turtles" do
 end
 ```
 
+Exemple de test de modèle avec utilisation d'un subject
+
+```ruby
+require 'rails_helper'
+
+RSpec.describe Auction, :type => :model do
+  subject { described_class.new }
+
+  it "is valid with valid attributes" do
+    subject.title = "Anything"
+    expect(subject).to be_valid
+  end
+
+  it "is not valid without a title" do
+    expect(subject).to_not be_valid
+  end
+
+  it "is not valid without a description"
+  it "is not valid without a start_date"
+  it "is not valid without a end_date"
+end
+```
+
+
 ## FactoryBot
 FactoryBot est une gem pour nous aider à définir des factories qui permettent de générer des objets en DB dans nos tests.
 
