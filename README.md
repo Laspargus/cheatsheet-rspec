@@ -245,3 +245,25 @@ end
 ```
 
 
+### Liens Utiles
+
+#### Test de modèle
+https://semaphoreci.com/community/tutorials/how-to-test-rails-models-with-rspec
+
+#### Test de controleur
+https://kolosek.com/rspec-controller-test/
+
+#### Let vs Before
+https://kolosek.com/rspec-let-vs-before/
+
+#### Better Spec
+http://www.betterspecs.org/#subject
+
+#### Factory Boat
+https://devhints.io/factory_bot
+
+#### Built In Matcher
+https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/built-in-matchers
+
+
+
