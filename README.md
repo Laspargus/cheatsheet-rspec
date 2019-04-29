@@ -259,11 +259,12 @@ https://kolosek.com/rspec-let-vs-before/
 #### Better Spec
 http://www.betterspecs.org/#subject
 
-#### Factory Boat
+#### CheatSheet Factory Boat
 https://devhints.io/factory_bot
 
 #### Built In Matcher
 https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/built-in-matchers
 
-
+#### CheatSheet Rspec
+https://devhints.io/rspec-rails
 
