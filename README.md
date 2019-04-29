@@ -360,3 +360,5 @@ https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/built-in-matchers
 #### CheatSheet Rspec
 https://devhints.io/rspec-rails
 
+#### Set up Cypress
+https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
