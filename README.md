@@ -127,12 +127,15 @@ RSpec.describe Auction, :type => :model do
   end
 
   it "is not valid without a title" do
+    subject.title = nil
     expect(subject).to_not be_valid
   end
 
   it "is not valid without a description"
-  it "is not valid without a start_date"
-  it "is not valid without a end_date"
+    subject.description = nil
+    expect(subject).to_not be_valid
+   end
+
 end
 ```
 Parfois il est nécessaire de combiner un subject avec un let. 
@@ -148,6 +151,7 @@ subject {
                     seller: seller)
 }
 ```
+La plupart du temps, subject est utilisé pour renvoyer une instance de classe. 
 
 
 ## FactoryBot
