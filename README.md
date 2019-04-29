@@ -135,6 +135,19 @@ RSpec.describe Auction, :type => :model do
   it "is not valid without a end_date"
 end
 ```
+Parfois il est nécessaire de combiner un subject avec un let. 
+
+Voici un exemple : 
+
+```ruby 
+let(:seller) { User.new(:email => "jane@doe.com", :password => "pw1234",
+                       :password_confirmation => "pw1234") }
+subject {
+  described_class.new(title: "Anything", description: "Lorem ipsum",
+                    start_date: DateTime.now, end_date: DateTime.now + 1.week,
+                    seller: seller)
+}
+```
 
 
 ## FactoryBot
