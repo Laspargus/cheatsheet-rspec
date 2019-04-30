@@ -333,6 +333,14 @@ Exemple :
 
 ## Test de Controller
 
+##Cypress
+
+```$npx cypress open```
+Permet d'ouvrir Cypress en mode interactif
+
+```$npx cypress run```
+Permet d'ouvrir cypress dans le terminal sans visuel (headless mode)
+
 
 
 
