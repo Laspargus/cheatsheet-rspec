@@ -97,6 +97,12 @@ it "has one turtle in db" do
 end
 ```
 
+Si l'instance pose problème, on peut ajouter ce bloc pour avoir le détail lors de la commande rspec
+
+```ruby
+@stay_other_tenant_other_studio = FactoryBot.create(:stay).tap { |e| p e.valid?; p e.errors }
+```
+
 Il se déclare généralement après le describe et va permettre d'appeler une varibale dans tous les tests qui suivent. 
 
 ## SUBJECT
