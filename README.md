@@ -4,7 +4,8 @@
 - rspec-rails: rspec pour rails \o/
 - rubocop: rubocop ça check la syntaxe de ton code :)
 
-```rails g rspec:install
+```
+rails g rspec:install
 Running via Spring preloader in process 24305
   create  .rspec
   create  spec
