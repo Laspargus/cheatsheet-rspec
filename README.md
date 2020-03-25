@@ -4,6 +4,14 @@
 - rspec-rails: rspec pour rails \o/
 - rubocop: rubocop ça check la syntaxe de ton code :)
 
+```rails g rspec:install
+Running via Spring preloader in process 24305
+  create  .rspec
+  create  spec
+  create  spec/spec_helper.rb
+  create  spec/rails_helper.rb
+```
+
 ## EN TEST
 - factory_bot_rails: Permet de créer facilement des instance de modèle en database.
 - faker: Permet de générer de fausses données de test.
