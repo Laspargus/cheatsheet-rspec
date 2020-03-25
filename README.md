@@ -13,6 +13,28 @@ Running via Spring preloader in process 24305
   create  spec/rails_helper.rb
 ```
 
+Pour configurer rspec avec Factory Bot, il faut éditer le fichier spec/rails_helper.rb 
+
+### Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+```
+config.fixture_path = "#{::Rails.root}/spec/fixtures"
+```
+Mets en commentaire la ligne non commentée puis ajoute juste après la ligne suivante :
+```
+config.include FactoryBot::Syntax::Methods
+```
+
+Pour installer shouldamatcher, il faut également éditer le fichier rails_helper et ajouter :
+```
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+```
+
+
 ## EN TEST
 - factory_bot_rails: Permet de créer facilement des instance de modèle en database.
 - faker: Permet de générer de fausses données de test.
